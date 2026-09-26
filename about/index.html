@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &mdash; </title>
+  <link rel="preload" href="../static/fonts/commit-mono-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div>
+        <a href="../" class="site-title-link">
+          <h1 class="site-title">Mongkon Kamprom Website</h1>
+        </a>
+        <div class="tagline">Solutions Architect &middot; Senior DevOps &amp; Platform Engineer</div>
+      </div>
+      <div class="header-controls">
+        <nav class="site-nav">
+          <a href="../">Home</a>
+          <a href="./">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../projects/">Projects</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          Theme: Light
+        </button>
+      </div>
+    </header>
+
+    <main>
+      
+  <article>
+    
+      <h2>About</h2>
+    
+    <p>As Solutions Architect and Senior DevOps / Platform Engineer at CK-THINK, I take a lead design, scaling, and optimizing the infrastructure that powers healthcare solutions.
+<br><br>
+8+ years in software engineering experience, including 5+ years operating Kubernetes and AWS in production.
+<br><br>
+My background spans Healthcare platform, E-commerce, high-availability infrastructure, GitOps automation, and backend engineering.
+<br><br></p>
+<h3>Career Highlights</h3>
+<ul>
+<li><strong>Healthcare Scale</strong>: Architected systems deployed across 15 hospitals, supporting 24 microservices and ~1,400 daily users with a 99.95% SLA.</li>
+<li><strong>Production Kubernetes</strong>: Designed and operated 5 production clusters across 36 nodes (AWS EKS and on-premises), plus unified observability across 48 production and UAT nodes.</li>
+<li><strong>Internal Developer Platform &amp; GitOps</strong>: Built automated CI/CD and deployment pipelines that cut release cycles from ~5 minutes to ~50 seconds.</li>
+<li><strong>Healthcare Standards</strong>: Engineered real-time hospital integrations and clinical imaging workflows using HL7, MLLP, PACS, and LIS.</li>
+<li><strong>DevSecOps &amp; Compliance</strong>: Implemented zero-trust identity with Keycloak and OAuth2, enforcing compliance standards for sensitive healthcare data.</li>
+</ul>
+<h3>Approach</h3>
+<p>I enjoy solving complex infrastructure, reliability, and architecture problems, but I remain hands-on writing code, debugging systems, and building automation pipelines.</p>
+<hr>
+<h2>Technology Stack</h2>
+<div class="tech-grid">
+  <div class="tech-card">
+    <h3>Cloud, Platform &amp; IaC</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">AWS</span>
+      <span class="tech-tag">Kubernetes</span>
+      <span class="tech-tag">Terraform</span>
+      <span class="tech-tag">Helm</span>
+      <span class="tech-tag">Docker</span>
+      <span class="tech-tag">Argo CD</span>
+      <span class="tech-tag">GitLab CI</span>
+      <span class="tech-tag">Jenkins</span>
+    </div>
+  </div><div class="tech-card">
+    <h3>Languages &amp; Framework</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">Go</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Bash</span>
+      <span class="tech-tag">Javascript</span>
+      <span class="tech-tag">Node.js</span>
+      <span class="tech-tag">NestJS</span>
+      <span class="tech-tag">React</span>
+      <span class="tech-tag">PHP</span>
+    </div>
+  </div><div class="tech-card">
+    <h3>Data &amp; Messaging</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">RabbitMQ</span>
+      <span class="tech-tag">MongoDB</span>
+      <span class="tech-tag">MinIO</span>
+    </div>
+  </div><div class="tech-card">
+    <h3>Observability &amp; Security</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">Prometheus</span>
+      <span class="tech-tag">Grafana</span>
+      <span class="tech-tag">Keycloak</span>
+      <span class="tech-tag">NGINX</span>
+      <span class="tech-tag">Loki</span>
+      <span class="tech-tag">Thanos</span>
+      <span class="tech-tag">OpenTelemetry</span>
+      <span class="tech-tag">HAProxy</span>
+      <span class="tech-tag">OAuth2 Proxy</span>
+      <span class="tech-tag">pgBackRest</span>
+    </div>
+  </div>
+</div><hr>
+<h2>Core Focus</h2>
+<ul class="topic-list">
+  <li>Internal Developer Platforms (IDP) &amp; GitOps Automation</li>
+  <li>AI/ML Integration (GPU Provisioning &amp; Serving)</li>
+  <li>Healthcare Data Pipelines (HL7, PACS, LIS) &amp; Compliance</li>
+  <li>High-Availability Hybrid Cloud Infrastructure</li>
+</ul>
+  </article>
+
+    </main>
+
+    <footer class="site-footer">
+      <a class="nav-link" href="https://github.com/adthonb" target="_blank" rel="noopener">GitHub</a>
+      &middot;
+      <a class="nav-link" href="https://www.linkedin.com/in/mongkon-kp" target="_blank" rel="noopener">LinkedIn</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let storedTheme = null;
+      try {
+        storedTheme = localStorage.getItem('theme');
+      } catch (e) {}
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark-mode');
+          toggleBtn.textContent = 'Theme: Dark';
+        } else {
+          document.body.classList.remove('dark-mode');
+          toggleBtn.textContent = 'Theme: Light';
+        }
+        try {
+          localStorage.setItem('theme', theme);
+        } catch (e) {}
+      }
+
+      if (storedTheme) {
+        setTheme(storedTheme);
+      } else if (prefersDark) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+
+      toggleBtn.addEventListener('click', function () {
+        const isDark = document.body.classList.contains('dark-mode');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    })();
+  </script>
+</body>
+</html>
