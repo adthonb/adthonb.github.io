@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Omni Video Orchestrator &mdash; </title>
+  <link rel="preload" href="../../static/fonts/commit-mono-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css">
+  <link rel="stylesheet" href="../../static/css/custom.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div>
+        <a href="../../" class="site-title-link">
+          <h1 class="site-title">Mongkon Kamprom Website</h1>
+        </a>
+        <div class="tagline">Solutions Architect &middot; Senior DevOps &amp; Platform Engineer</div>
+      </div>
+      <div class="header-controls">
+        <nav class="site-nav">
+          <a href="../../">Home</a>
+          <a href="../../about/">About</a>
+          <a href="../../blog/">Blog</a>
+          <a href="../">Projects</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          Theme: Light
+        </button>
+      </div>
+    </header>
+
+    <main>
+      
+  <article class="project-detail">
+    <h2>Omni Video Orchestrator</h2>
+    
+      <div class="project-date">2026-09-08</div>
+    
+
+    
+      <p><a href="https://github.com/adthonb/omni-automated-workflow" target="_blank" rel="noopener">Visit Project &rarr;</a></p>
+    
+
+    <div class="project-content">
+      <p>Automated workflow to generate video by Google FLow with CLI</p>
+
+    </div>
+
+    <hr>
+    <p><a href="../">&larr; Back to all projects</a></p>
+  </article>
+
+    </main>
+
+    <footer class="site-footer">
+      <a class="nav-link" href="https://github.com/adthonb" target="_blank" rel="noopener">GitHub</a>
+      &middot;
+      <a class="nav-link" href="https://www.linkedin.com/in/mongkon-kp" target="_blank" rel="noopener">LinkedIn</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let storedTheme = null;
+      try {
+        storedTheme = localStorage.getItem('theme');
+      } catch (e) {}
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark-mode');
+          toggleBtn.textContent = 'Theme: Dark';
+        } else {
+          document.body.classList.remove('dark-mode');
+          toggleBtn.textContent = 'Theme: Light';
+        }
+        try {
+          localStorage.setItem('theme', theme);
+        } catch (e) {}
+      }
+
+      if (storedTheme) {
+        setTheme(storedTheme);
+      } else if (prefersDark) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+
+      toggleBtn.addEventListener('click', function () {
+        const isDark = document.body.classList.contains('dark-mode');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    })();
+  </script>
+</body>
+</html>
